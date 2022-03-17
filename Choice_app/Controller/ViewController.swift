@@ -18,11 +18,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         storyTextLabel.text = storyObject.sendStory().title
-        choice1ButtonOut.setTitle(storyObject.sendStory().choice1, for: .normal) 
+        choice1ButtonOut.setTitle(storyObject.sendStory().choice1, for: .normal)
         choice2ButtonOut.setTitle(storyObject.sendStory().choice2, for: .normal)
     }
 
     @IBAction func changedStory(_ sender: UIButton) {
+        storyObject.storyNumber += 1
+        storyTextLabel.text = storyObject.sendStory().title
+        choice1ButtonOut.setTitle(storyObject.sendStory().choice1, for: .normal)
+        choice2ButtonOut.setTitle(storyObject.sendStory().choice2, for: .normal)
         
     }
     

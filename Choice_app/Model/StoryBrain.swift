@@ -40,7 +40,15 @@ struct StoryBrain {
         choice2: "End"
     )]
     
-    func sendStory() -> Story{
-        return stories[storyNumber]
+    mutating func sendStory() -> Story{
+        if storyNumber < stories.count {
+            return stories[storyNumber]
+        } else {
+            storyNumber = 0
+            return stories[storyNumber]
+        }
+        
+        
+        
     }
 }
