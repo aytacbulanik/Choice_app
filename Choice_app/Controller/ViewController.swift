@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var storyObject : StoryBrain!
+    var storyObject = StoryBrain()
     
     @IBOutlet weak var storyTextLabel: UILabel!
     @IBOutlet weak var choice1ButtonOut: UIButton!
@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         storyTextLabel.text = storyObject.sendStory().title
-        
+        choice1ButtonOut.setTitle(storyObject.sendStory().choice1, for: .normal) 
+        choice2ButtonOut.setTitle(storyObject.sendStory().choice2, for: .normal)
     }
 
     @IBAction func changedStory(_ sender: UIButton) {
