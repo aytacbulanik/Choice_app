@@ -17,17 +17,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyTextLabel.text = storyObject.sendStory().title
-        choice1ButtonOut.setTitle(storyObject.sendStory().choice1, for: .normal)
-        choice2ButtonOut.setTitle(storyObject.sendStory().choice2, for: .normal)
+        storyShow()
     }
 
     @IBAction func changedStory(_ sender: UIButton) {
-        storyObject.storyNumber += 1
+        
+        if sender.currentTitle! == storyObject.sendStory().choice1 {
+            storyObject.storyNumber = storyObject.sendStory().choice1Destination
+        } else {
+            storyObject.storyNumber = storyObject.sendStory().choice2Destination
+        }
+        storyShow()
+        
+    }
+    
+    func storyShow() {
         storyTextLabel.text = storyObject.sendStory().title
         choice1ButtonOut.setTitle(storyObject.sendStory().choice1, for: .normal)
         choice2ButtonOut.setTitle(storyObject.sendStory().choice2, for: .normal)
-        
     }
     
 }

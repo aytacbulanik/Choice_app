@@ -41,6 +41,9 @@ struct StoryBrain {
             storyNumber = 0
             return stories[storyNumber]
         }
+    }
+    
+    func calculateStory() {
         
     }
 }
