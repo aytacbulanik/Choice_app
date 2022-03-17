@@ -25,8 +25,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4I-wa-UMw">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="578"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsT-v2-REm">
@@ -39,6 +39,9 @@
                                         <state key="normal" title="Choice1" backgroundImage="choice1Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changedStory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DL9-07-6dW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-fX-7eM">
                                         <rect key="frame" x="0.0" y="688" width="374" height="90"/>
@@ -50,6 +53,9 @@
                                         <state key="normal" title="Choice2" backgroundImage="choice2Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changedStory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XxV-o2-QN4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -67,6 +73,11 @@
                             <constraint firstItem="JoZ-2s-xen" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xgz-3M-GPN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choice1ButtonOut" destination="DsT-v2-REm" id="Jtp-df-UAh"/>
+                        <outlet property="choice2ButtonOut" destination="Iyg-fX-7eM" id="j5z-77-lGi"/>
+                        <outlet property="storyTextLabel" destination="f4I-wa-UMw" id="MpL-gD-EET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
